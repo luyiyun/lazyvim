@@ -1,6 +1,23 @@
 -- since this is just an example spec, don't actually load anything here and return an empty spec
 -- stylua: ignore
-if true then return {} end
+if true then return {
+  {
+ 'linux-cultist/venv-selector.nvim',
+  dependencies = { 'neovim/nvim-lspconfig', 'nvim-telescope/telescope.nvim', 'mfussenegger/nvim-dap-python' },
+  opts = {
+    -- Your options go here
+    -- name = "venv",
+    -- auto_refresh = false
+  },
+  event = 'VeryLazy', -- Optional: needed only if you want to type `:VenvSelect` without a keymapping
+  keys = {
+    -- Keymap to open VenvSelector to pick a venv.
+    { '<leader>vs', '<cmd>VenvSelect<cr>' },
+    -- Keymap to retrieve the venv from a cache (the one previously used for the same project directory).
+    { '<leader>vc', '<cmd>VenvSelectCached<cr>' },
+  },   
+  }
+} end
 
 -- every spec file under the "plugins" directory will be loaded automatically by lazy.nvim
 --
