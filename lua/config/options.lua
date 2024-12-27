@@ -17,3 +17,5 @@ if is_wsl then
     },
   }
 end
+
+vim.opt.timeoutlen = 150
