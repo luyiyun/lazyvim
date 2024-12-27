@@ -38,4 +38,27 @@ return {
       },
     },
   },
+  {
+    "neovim/nvim-lspconfig",
+    ---@class PluginLspOpts
+    opts = {
+      ---@type lspconfig.options
+      servers = {
+        -- pyright will be automatically installed with mason and loaded with lspconfig
+        pyright = {
+          settings = {
+            python = {
+              analysis = {
+                autoSearchPaths = true,
+                diagnosticMode = "workspace",
+                -- NOTE: 以下两行可以避免type-stubs所引起的问题
+                typeCheckingMode = "off",
+                useLibraryCodeForTypes = true,
+              },
+            },
+          },
+        },
+      },
+    },
+  },
 }
