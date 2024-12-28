@@ -13,13 +13,13 @@ return {
       require("venv-selector").setup({
         settings = {
           search = {
-            miniforge_base = {
+            miniconda_base = {
               command = "find $HOME/miniforge3/bin -type f -wholename '*bin/python*'|grep -v config",
-              type = "miniforge3",
+              type = "anaconda", -- 必须是anaconda，不然会报错
             },
-            miniforge_envs = {
+            miniconda_envs = {
               command = "find $HOME/miniforge3/envs -type f -wholename '*bin/python*'|grep -v config",
-              type = "miniforge3",
+              type = "anaconda",
             },
           },
         },
