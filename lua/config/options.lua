@@ -20,3 +20,4 @@ end
 
 vim.opt.timeoutlen = 150
 vim.g.lazyvim_python_lsp = "basedpyright"
+vim.opt.sessionoptions = "blank,buffers,curdir,folds,help,tabpages,winsize,winpos,terminal,localoptions"
