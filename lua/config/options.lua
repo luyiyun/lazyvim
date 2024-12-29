@@ -19,3 +19,4 @@ if is_wsl then
 end
 
 vim.opt.timeoutlen = 150
+vim.g.lazyvim_python_lsp = "basedpyright"
