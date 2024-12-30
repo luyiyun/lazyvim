@@ -19,3 +19,8 @@ vim.keymap.set("i", "<C-J>", "<esc><cmd>m .+1<cr>==gi", { desc = "Move Down" })
 vim.keymap.set("i", "<C-J>", "<esc><cmd>m .-2<cr>==gi", { desc = "Move Up" })
 vim.keymap.set("v", "<C-J>", ":m '>+1<cr>gv=gv", { desc = "Move Down" })
 vim.keymap.set("v", "<C-K>", ":m '<-2<cr>gv=gv", { desc = "Move Up" })
+
+-- remap for formatting
+vim.keymap.set({ "n", "v" }, "<leader>rf", function()
+  LazyVim.format({ force = true })
+end, { desc = "Format" })

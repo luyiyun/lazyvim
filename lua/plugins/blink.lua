@@ -9,6 +9,7 @@ return {
         ["<C-k>"] = { "select_prev", "fallback" },
         ["<CR>"] = { "accept", "fallback" },
       }
+      opts.completion.accept["auto_brackets"] = { enabled = false }
       opts.sources = {
         -- remember to enable your providers here
         default = { "lsp", "path", "snippets", "buffer", "r" },
