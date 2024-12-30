@@ -31,6 +31,7 @@ return {
             -- },
           },
         },
+        cmdline = {},
       }
     end,
   },
