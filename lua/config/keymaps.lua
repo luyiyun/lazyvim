@@ -24,3 +24,6 @@ vim.keymap.set("v", "<C-K>", ":m '<-2<cr>gv=gv", { desc = "Move Up" })
 vim.keymap.set({ "n", "v" }, "<leader>rf", function()
   LazyVim.format({ force = true })
 end, { desc = "Format" })
+
+-- remap for rename
+vim.keymap.set({ "n", "v" }, "<leader>rn", vim.lsp.buf.rename, { desc = "Rename" })
