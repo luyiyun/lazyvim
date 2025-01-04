@@ -62,14 +62,18 @@ return {
               analysis = {
                 autoSearchPaths = true,
                 diagnosticMode = "workspace",
-                -- NOTE: 以下两行可以避免type-stubs所引起的问题
                 typeCheckingMode = "off",
-                useLibraryCodeForTypes = true,
+                useLibraryCodeForTypes = false,
+                stubPath = vim.fn.stdpath("data") .. "/lazy/python-type-stubs",
               },
             },
           },
         },
       },
     },
+  },
+  {
+    -- 这个插件可以自动安装pyright的type-stubs
+    "microsoft/python-type-stubs",
   },
 }

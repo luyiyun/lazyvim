@@ -21,3 +21,8 @@ end
 vim.opt.timeoutlen = 150
 vim.g.lazyvim_python_lsp = "basedpyright"
 vim.opt.sessionoptions = "blank,buffers,curdir,folds,help,tabpages,winsize,winpos,terminal,localoptions"
+
+local osname = vim.uv.os_uname().sysname
+if osname == "Windows_NT" then
+  vim.o.shell = "pwsh.exe"
+end
