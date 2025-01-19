@@ -1,7 +1,8 @@
 return {
   {
     "keaising/im-select.nvim",
-    enabled = vim.uv.os_uname().sysname == "Windows_NT",
+    -- enabled = vim.uv.os_uname().sysname == "Windows_NT",
+    enabled = false, -- use rime instead
     config = function()
       require("im_select").setup({
         default_im_select = "1033",

@@ -24,3 +24,10 @@ vim.api.nvim_create_autocmd("Filetype", {
   group = "mygroup",
   desc = "Don't continue comments with o and O",
 })
+vim.api.nvim_create_autocmd({ "Filetype" }, {
+  pattern = { "markdown" },
+  callback = function()
+    vim.b.autoformat = false
+  end,
+  desc = "Disable autoformat for markdown files",
+})
