@@ -32,7 +32,14 @@ return {
             -- },
           },
         },
-        cmdline = {},
+      }
+      -- 如果安装了cargo，则blink.cmp会自动安装fuzzy match
+      -- 否则则需要手动指定fuzzy.prebuilt_binaries.force_version的版本，
+      -- 可以在https://github.com/saghen/blink.cmp/releases/latest找到最新版本
+      opts.fuzzy = {
+        prebuilt_binaries = {
+          force_version = "v1.0.0",
+        },
       }
     end,
   },
