@@ -6,7 +6,7 @@ Refer to the [documentation](https://lazyvim.github.io/installation) to get star
 ## pre-requisites
 
 1. [git >= 2.19](https://git-scm.com/downloads)
-2. [neovim](https://github.com/neovim/neovim), or [neovim-release](https://github.com/neovim/neovim-releases) for linux with gibc 2.17
+2. [neovim](https://github.com/neovim/neovim), or [neovim-release](https://github.com/neovim/neovim-releases) for linux with gibc 2.17 (not recommended)
 3. [lazygit](https://github.com/jesseduffield/lazygit)
 4. [curl](https://curl.se/)
 5. [fzf](https://github.com/junegunn/fzf)
@@ -32,3 +32,7 @@ git clone https://github.com/luyiyun/lazyvim.git $env:LOCALAPPDATA\nvim
 ## After installation
 
 1. run `:Fitten login` to get FittenCode support.
+
+## TODO Lists
+
+- [ ] python LSP suggestions does not work with scipy.
